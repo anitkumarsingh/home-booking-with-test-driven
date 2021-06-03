@@ -11,3 +11,11 @@ beforeEach(() => {
 it('should show logo', () => {
   expect(getByTestId(container, 'logo')).toBeTruthy();
 });
+
+it('should show search', () => {
+  expect(getByTestId(container, 'search')).toBeTruthy();
+});
+
+it('should show menu', () => {
+  expect(getByTestId(container, 'menu')).toBeTruthy();
+});
