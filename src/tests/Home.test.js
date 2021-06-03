@@ -1,11 +1,12 @@
 import React from 'react';
-import { getAllByTestId, render } from '@testing-library/react';
+import { act, getAllByTestId, render } from '@testing-library/react';
 import Home from '../components/Home';
 
 let container = null;
 
-beforeEach(() => {
+beforeEach(async () => {
   container = render(<Home />).container;
+  await act(async () => {});
 });
 
 it('should show homes', () => {

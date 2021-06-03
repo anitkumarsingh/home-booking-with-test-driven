@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Home = () => {
+  const [homeData, setHomeData] = useState([]);
+
   const homeDataPromise = Promise.resolve([
     {
       title: 'Test title 1',
@@ -29,12 +31,20 @@ const Home = () => {
   ]);
 
   let homes;
-  homeDataPromise.then((home) => {
-    homes = home.map((i) => {
-      return <div data-testid="homes">Homes</div>;
-    });
-  });
+
+  useEffect(() => {
+    homeDataPromise.then((home) => setHomeData(home));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   console.log('home ran', homes);
+  homes = homeData.map((i, index) => {
+    return (
+      <div data-testid="homes" key={index}>
+        Homes
+      </div>
+    );
+  });
   return <div>{homes}</div>;
 };
 
