@@ -19,3 +19,11 @@ it('should show search', () => {
 it('should show menu', () => {
   expect(getByTestId(container, 'menu')).toBeTruthy();
 });
+
+it('should show filter', () => {
+  expect(getByTestId(container, 'home-type')).toBeTruthy();
+  expect(getByTestId(container, 'date')).toBeTruthy();
+  expect(getByTestId(container, 'price')).toBeTruthy();
+  expect(getByTestId(container, 'room')).toBeTruthy();
+  expect(getByTestId(container, 'amenities')).toBeTruthy();
+});
