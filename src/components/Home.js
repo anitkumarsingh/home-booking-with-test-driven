@@ -4,7 +4,7 @@ import apiClient from '../services/apiClient';
 const Home = () => {
   const [homeData, setHomeData] = useState([]);
 
-  const homeDataPromise = apiClient.homeApi();
+  const homeDataPromise = apiClient.getHomes();
   // const homeDataPromise = Promise.resolve([
   // {
   // title: 'Test title 1',
