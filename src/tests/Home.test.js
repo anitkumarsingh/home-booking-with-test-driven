@@ -1,5 +1,10 @@
 import React from 'react';
-import { act, getAllByTestId, render } from '@testing-library/react';
+import {
+  act,
+  getAllByTestId,
+  getNodeText,
+  render
+} from '@testing-library/react';
 import Home from '../components/Home';
 import apiClient from '../services/apiClient';
 
@@ -39,7 +44,11 @@ beforeEach(async () => {
 });
 
 it('should show homes', () => {
-  console.log('grabing homes');
   const homes = getAllByTestId(container, 'homes');
   expect(homes.length).toBeGreaterThan(0);
+});
+
+it('should show home title', () => {
+  const homesTitle = getAllByTestId(container, 'home-title');
+  expect(getNodeText(homesTitle[0])).toBe('Test title 1');
 });
