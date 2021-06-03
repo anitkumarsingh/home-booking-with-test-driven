@@ -52,3 +52,16 @@ it('should show home title', () => {
   const homesTitle = getAllByTestId(container, 'home-title');
   expect(getNodeText(homesTitle[0])).toBe('Test title 1');
 });
+it('should show image', () => {
+  const homeImg = getAllByTestId(container, 'img');
+  expect(homeImg).toBeTruthy();
+});
+it('should show location', () => {
+  const loc = getAllByTestId(container, 'home-loc');
+  expect(getNodeText(loc[0])).toBe('Test location 1');
+});
+
+it('should show price', () => {
+  const price = getAllByTestId(container, 'price');
+  expect(getNodeText(price[0])).toBe('12');
+});
