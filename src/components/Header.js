@@ -42,7 +42,7 @@ const Header = () => {
           type="button"
           className="text-nowrap mr-4 py-1 btn btn-outline-secondary"
         >
-          Date
+          Dates
         </button>
         <button
           data-testid="price"
@@ -52,11 +52,18 @@ const Header = () => {
           Price
         </button>
         <button
+          data-testid="guest"
+          type="button"
+          className="text-nowrap mr-4 py-1 btn btn-outline-secondary"
+        >
+          Guests
+        </button>
+        <button
           data-testid="room"
           type="button"
           className="text-nowrap mr-4 py-1 btn btn-outline-secondary"
         >
-          Room
+          Rooms
         </button>
         <button
           data-testid="amenities"

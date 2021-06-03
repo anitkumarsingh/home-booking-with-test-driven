@@ -24,6 +24,7 @@ it('should show filter', () => {
   expect(getByTestId(container, 'home-type')).toBeTruthy();
   expect(getByTestId(container, 'date')).toBeTruthy();
   expect(getByTestId(container, 'price')).toBeTruthy();
+  expect(getByTestId(container, 'guest')).toBeTruthy();
   expect(getByTestId(container, 'room')).toBeTruthy();
   expect(getByTestId(container, 'amenities')).toBeTruthy();
 });
